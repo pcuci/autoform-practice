@@ -42,7 +42,7 @@ Topics.attachSchema new SimpleSchema(
     type: Number
     label: "Importance"
     autoform:
-      type: "range"
+      type: "uncheckable-range"
       min: 0
       max: 100
   stars:
@@ -51,7 +51,7 @@ Topics.attachSchema new SimpleSchema(
     autoform:
       type: "range"
       min: 0
-      max: 1
+      max: 50
   tags:
     type: [String]
     label: "Tags"
@@ -106,6 +106,29 @@ Topics.attachSchema new SimpleSchema(
         $setOnInsert: new Date
       else
         @unset()
+  stressors:
+    type: [Object]
+    label: "Stressors"
+    optional: true
+  "stressors.$.name":
+    type: String
+    optional: true
+  "stressors.$.type":
+    type: String
+    optional: true
+  "stressors.$.intensity":
+    type: String
+    label: "How much afraid?"
+    optional: true
+    allowedValues: options.stressors
+    autoform:
+      type: "select-uncheckable-radio"
+      options: ->
+        _.map options.stressors, (option) ->
+          {
+            label: dictionary.get("charts.options." + option)
+            value: option
+          }
   updated:
     type: Date
     label: "Updated At"

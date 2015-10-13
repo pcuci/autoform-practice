@@ -1,4 +1,7 @@
-Template.TopicEdit.events {}
+Template.TopicEdit.events {
+  'click button': ->
+    $('form#topicEditForm').submit()
+}
 
 Template.TopicEdit.helpers {
   beforeRemove: ->

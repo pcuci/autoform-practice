@@ -8,7 +8,7 @@ template(name="TopicEdit")
     +afQuickField(name='importance')
     +afQuickField(name='stars')
     +afQuickField(name='tags')
-    button(type="submit" class="btn btn-primary")
+    button(type="button" class="btn btn-primary")
       | Update
   +quickRemoveButton(collection="Topics" _id=this._id beforeRemove=beforeRemove class="btn red lighten-2 right")
     i.fa.fa-trash-o

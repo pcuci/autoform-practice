@@ -59,6 +59,7 @@ npm-bcrypt@0.7.8_2
 observe-sequence@1.0.6
 ordered-dict@1.0.3
 pcuci:autoform-select-uncheckable-radio-aminy2@0.0.1
+pcuci:autoform-uncheckable-range@0.0.1
 poetic:materialize-scss@1.2.6
 random@1.0.3
 reactive-dict@1.1.0

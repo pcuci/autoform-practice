@@ -77,7 +77,6 @@ topicHook =
     doc
 
   formToModifier: (modifier) ->
-    console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> in formToModifier, modifier:", modifier)
     modifier
 
   # Called whenever `doc` attribute reactively changes, before values
